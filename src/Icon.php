@@ -8,14 +8,14 @@ use function implode;
 
 abstract class Icon
 {
-    private const BASE_CLASS = 'uil';
+    protected const BASE_CLASS = 'uil';
 
-    private const ITEM_TAG = 'i';
+    protected const ITEM_TAG = 'i';
 
-    private array $addClasses = [];
+    protected array $addClasses = [];
 
-    private ?string $icon = null;
-    private ?string $content = null;
+    protected ?string $icon = null;
+    protected ?string $content = null;
 
     public static function i(string $icon, ?string $content = null): static
     {
