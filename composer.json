@@ -1,0 +1,43 @@
+{
+  "name": "mylistryx/yii2-unicons-icons",
+  "description": "Yii2 Unicons icons asset bundle",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "type": "yii2-extension",
+  "authors": [
+    {
+      "name": "Sergey Zhukovskiy",
+      "email": "mylistryx@gmail.com",
+      "homepage": "https://net23.ru"
+    }
+  ],
+  "keywords": [
+    "yii2",
+    "unicons",
+    "icons",
+    "asset",
+    "bundle"
+  ],
+  "version": "1.0.0",
+  "readme": "README.md",
+  "autoload": {
+    "psr-4": {
+      "yii\\uil\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "yiisoft/yii2": "~2.0.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    }
+  }
+}
