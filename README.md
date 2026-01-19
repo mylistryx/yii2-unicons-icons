@@ -24,6 +24,6 @@ Then register assets in your view file:
 
 and use:
 
-`<?= UIL::i('analysis') ?>` or `<?= UIL::icon('analysis') ?>`
+`<?= UIL::i('analysis') ?>`
 
 See source files for more.

@@ -8,20 +8,20 @@ use function implode;
 
 abstract class Icon
 {
-    protected const BASE_CLASS = 'uil';
+    private const BASE_CLASS = 'uil';
 
-    protected const ITEM_TAG = 'i';
+    private const ITEM_TAG = 'i';
 
-    protected array $addClasses = [];
+    private array $addClasses = [];
 
-    protected ?string $icon = null;
-    protected ?string $content = null;
+    private ?string $icon = null;
+    private ?string $content = null;
 
     public static function i(string $icon, ?string $content = null): static
     {
         $icon = new static();
-        $icon->icon = $icon;
-        $icon->content = $content;
+        $icon->icon($icon);
+        $icon->content($content);
 
         return $icon;
     }
@@ -42,9 +42,18 @@ abstract class Icon
         ]);
     }
 
-    public static function icon(string $icon, ?string $content = null): string
+    public function icon(string $icon): static
     {
-        return static::i($icon, $content);
+        $this->icon = $icon;
+
+        return $this;
+    }
+
+    public function content(string $content): static
+    {
+        $this->content = $content;
+
+        return $this;
     }
 
     public function addClass(string $class): static
