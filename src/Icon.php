@@ -49,7 +49,7 @@ abstract class Icon
         return $this;
     }
 
-    public function content(string $content): static
+    public function content(?string $content = null): static
     {
         $this->content = $content;
 
